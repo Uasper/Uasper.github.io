@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Объектив Ковалёва | Фотоуслуги Минск</title>
+    <meta name="description" content="ИП «Объектив Ковалёва» — профессиональные фотоуслуги в Минске. Бизнес-портреты, репортажи, свадьбы.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader-ring">
+            <div class="ring-segment" style="--i:0"></div>
+            <div class="ring-segment" style="--i:1"></div>
+            <div class="ring-segment" style="--i:2"></div>
+            <div class="ring-segment" style="--i:3"></div>
+            <div class="ring-segment" style="--i:4"></div>
+            <div class="ring-segment" style="--i:5"></div>
+        </div>
+        <p class="loader-text">Фокусируюсь...</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <div class="logo-lens">
+                    <div class="lens-ring ring-1"></div>
+                    <div class="lens-ring ring-2"></div>
+                    <div class="lens-ring ring-3"></div>
+                    <div class="lens-ring ring-4"></div>
+                    <div class="lens-center"></div>
+                </div>
+                <span class="logo-text">Объектив Ковалёва</span>
+            </a>
+            <div class="nav-links">
+                <a href="#about" class="nav-link">О мастере</a>
+                <a href="#services" class="nav-link">Услуги</a>
+                <a href="#portfolio" class="nav-link">Портфолио</a>
+                <a href="#process" class="nav-link">Как работаем</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+            </div>
+            <button class="mobile-menu-btn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="#about" class="mobile-link">О мастере</a>
+            <a href="#services" class="mobile-link">Услуги</a>
+            <a href="#portfolio" class="mobile-link">Портфолио</a>
+            <a href="#process" class="mobile-link">Как работаем</a>
+            <a href="#reviews" class="mobile-link">Отзывы</a>
+            <a href="#contact" class="mobile-link">Контакты</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-video-container">
+                <div class="lens-flare"></div>
+                <div class="aperture-blades">
+                    <div class="blade" style="--rotation: 0deg"></div>
+                    <div class="blade" style="--rotation: 60deg"></div>
+                    <div class="blade" style="--rotation: 120deg"></div>
+                    <div class="blade" style="--rotation: 180deg"></div>
+                    <div class="blade" style="--rotation: 240deg"></div>
+                    <div class="blade" style="--rotation: 300deg"></div>
+                </div>
+                <div class="focus-particles" id="particles"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">MINSK, BELARUS</div>
+            <h1 class="hero-title">
+                <span class="title-line blur-in">Вижу то, что</span>
+                <span class="title-line blur-in delay-1">другие пропускают</span>
+            </h1>
+            <p class="hero-subtitle blur-in delay-2">Профессиональная фотография с душой и историей</p>
+            <a href="#contact" class="cta-button glass-btn blur-in delay-3">
+                <span class="btn-text">Забронировать съёмку</span>
+                <div class="btn-glow"></div>
+            </a>
+        </div>
+        <div class="testimonial-ticker">
+            <div class="ticker-content">
+                <span class="ticker-item">«Я никогда не видел себя так красиво» — Анна</span>
+                <span class="ticker-divider">✦</span>
+                <span class="ticker-item">«Эмоции, а не позы — вот что вышло» — Дмитрий</span>
+                <span class="ticker-divider">✦</span>
+                <span class="ticker-item">«Лучшие кадры нашей свадьбы» — Елена и Максим</span>
+                <span class="ticker-divider">✦</span>
+                <span class="ticker-item">«Корпоратив ожил на фотографиях» — Ольга</span>
+                <span class="ticker-divider">✦</span>
+                <span class="ticker-item">«Я никогда не видел себя так красиво» — Анна</span>
+                <span class="ticker-divider">✦</span>
+                <span class="ticker-item">«Эмоции, а не позы — вот что вышло» — Дмитрий</span>
+                <span class="ticker-divider">✦</span>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Листайте вниз</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">ISTORIA</span>
+                <h2 class="section-title">10 лет в журналистике</h2>
+                <div class="title-decoration"></div>
+            </div>
+            
+            <!-- Timeline -->
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <div class="timeline-item" data-year="2014">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-image grayscale-hover">
+                            <div class="image-placeholder" data-text="Первый репортаж">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                            <div class="shutter-overlay"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2014</span>
+                            <h3>Начало пути</h3>
+                            <p>Первые шаги в журналистской фотографии. Освещение местных событий и репортажей для белорусских изданий.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2016">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-image grayscale-hover">
+                            <div class="image-placeholder" data-text="Международный форум">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <div class="shutter-overlay"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2016</span>
+                            <h3>Международные проекты</h3>
+                            <p>Съёмка международных форумов и культурных мероприятий. Работы публиковались в зарубежных изданиях.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2018">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-image grayscale-hover">
+                            <div class="image-placeholder" data-text="Награждение">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="shutter-overlay"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2018</span>
+                            <h3>Победа в конкурсе</h3>
+                            <p>Победа в Национальном конкурсе журналистской фотографии. Признание профессионального сообщества.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2020">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-image grayscale-hover">
+                            <div class="image-placeholder" data-text="Новый этап">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="shutter-overlay"></div>
+                        </div>
+                        <div class="timeline-content">
+                            <span class="timeline-year">2020</span>
+                            <h3>ИП «Объектив Ковалёва»</h3>
+                            <p>Рождение собственного бизнеса. Переход от журналистики к коммерческой фотографии.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competition Award -->
+            <div class="award-showcase">
+                <div class="award-3d-frame">
+                    <div class="frame-face front">
+                        <i class="fas fa-medal"></i>
+                        <span>Национальный конкурс</span>
+                    </div>
+                    <div class="frame-face right">
+                        <i class="fas fa-camera-retro"></i>
+                        <span>Журналистика</span>
+                    </div>
+                    <div class="frame-face top">
+                        <i class="fas fa-star"></i>
+                        <span>2018</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transition Animation -->
+            <div class="transition-scene">
+                <div class="notebook">
+                    <div class="notebook-page"></div>
+                    <div class="notebook-spiral"></div>
+                </div>
+                <div class="camera-transform">
+                    <i class="fas fa-camera"></i>
+                    <i class="fas fa-camera-retro transformed"></i>
+                </div>
+            </div>
+
+            <div class="about-cta">
+                <a href="#portfolio" class="develop-button">
+                    <span>Посмотреть работы</span>
+                    <div class="develop-animation"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">USLUGI</span>
+                <h2 class="section-title">Услуги</h2>
+                <div class="title-decoration"></div>
+            </div>
+            <div class="services-grid">
+                <!-- Card 1: Business Portrait -->
+                <div class="service-card" data-tilt>
+                    <div class="card-inner">
+                        <div class="card-bg"></div>
+                        <div class="card-frames">
+                            <div class="film-frame" style="--frame: 0"></div>
+                            <div class="film-frame" style="--frame: 1"></div>
+                            <div class="film-frame" style="--frame: 2"></div>
+                            <div class="film-frame" style="--frame: 3"></div>
+                            <div class="film-frame" style="--frame: 4"></div>
+                            <div class="film-frame" style="--frame: 5"></div>
+                            <div class="film-frame" style="--frame: 6"></div>
+                            <div class="film-frame" style="--frame: 7"></div>
+                            <div class="film-frame" style="--frame: 8"></div>
+                            <div class="film-frame" style="--frame: 9"></div>
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="card-title">Бизнес-портрет</h3>
+                        <p class="card-desc">Профессиональный портрет для делового мира. Создаём образ, который говорит за вас.</p>
+                        <a href="#contact" class="card-link">
+                            <span class="link-dots">. . . . .</span>
+                            <span class="link-arrow">→</span>
+                            <span class="link-text">Подробнее</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Event Report -->
+                <div class="service-card" data-tilt>
+                    <div class="card-inner">
+                        <div class="card-bg event-bg"></div>
+                        <div class="card-slideshow">
+                            <div class="slide" style="--slide: 0"></div>
+                            <div class="slide" style="--slide: 1"></div>
+                            <div class="slide" style="--slide: 2"></div>
+                            <div class="slide main-slide"></div>
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3 class="card-title">Репортаж дня</h3>
+                        <p class="card-desc">Фиксируем важные события. Конференции, корпоративы, торжества — каждая эмоция сохранена.</p>
+                        <a href="#contact" class="card-link">
+                            <span class="link-dots">. . . . .</span>
+                            <span class="link-arrow">→</span>
+                            <span class="link-text">Подробнее</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Hidden Camera Wedding -->
+                <div class="service-card" data-tilt>
+                    <div class="card-inner">
+                        <div class="card-bg wedding-bg"></div>
+                        <div class="card-focus-effect">
+                            <div class="blur-layer"></div>
+                        </div>
+                        <div class="card-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="card-title">Свадьба скрытой камерой</h3>
+                        <p class="card-desc">Натуральные эмоции без постановки. Запечатлеваем искренность момента.</p>
+                        <a href="#contact" class="card-link">
+                            <span class="link-dots">. . . . .</span>
+                            <span class="link-arrow">→</span>
+                            <span class="link-text">Подробнее</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">PORTFOLIO</span>
+                <h2 class="section-title">Работы</h2>
+                <div class="title-decoration"></div>
+            </div>
+
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="portrait">Портрет</button>
+                <button class="filter-btn" data-filter="interior">Интерьер</button>
+                <button class="filter-btn" data-filter="report">Репортаж</button>
+                <button class="filter-btn" data-filter="wedding">Свадьба</button>
+            </div>
+
+            <div class="portfolio-gallery">
+                <div class="gallery-track">
+                    <div class="gallery-item" data-category="portrait">
+                        <div class="gallery-frame">
+                            <div class="gallery-image" style="background-color: #2a2a2a">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="frame-border"></div>
+                        </div>
+                        <div class="gallery-caption">
+                            <span>Бизнес-портрет</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="report">
+                        <div class="gallery-frame">
+                            <div class="gallery-image" style="background-color: #3a3a3a">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="frame-border"></div>
+                        </div>
+                        <div class="gallery-caption">
+                            <span>Корпоратив</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="interior">
+                        <div class="gallery-frame">
+                            <div class="gallery-image" style="background-color: #2d2d2d">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div class="frame-border"></div>
+                        </div>
+                        <div class="gallery-caption">
+                            <span>Интерьер</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="wedding">
+                        <div class="gallery-frame">
+                            <div class="gallery-image" style="background-color: #353535">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="frame-border"></div>
+                        </div>
+                        <div class="gallery-caption">
+                            <span>Свадьба</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="portrait">
+                        <div class="gallery-frame">
+                            <div class="gallery-image" style="background-color: #2f2f2f">
+                                <i class="fas fa-portrait"></i>
+                            </div>
+                            <div class="frame-border"></div>
+                        </div>
+                        <div class="gallery-caption">
+                            <span>Студийный портрет</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="report">
+                        <div class="gallery-frame">
+                            <div class="gallery-image" style="background-color: #333">
+                                <i class="fas fa-microphone"></i>
+                            </div>
+                            <div class="frame-border"></div>
+                        </div>
+                        <div class="gallery-caption">
+                            <span>Пресс-конференция</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="wedding">
+                        <div class="gallery-frame">
+                            <div class="gallery-image" style="background-color: #2b2b2b">
+                                <i class="fas fa-glass-cheers"></i>
+                            </div>
+                            <div class="frame-border"></div>
+                        </div>
+                        <div class="gallery-caption">
+                            <span>Торжество</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item" data-category="interior">
+                        <div class="gallery-frame">
+                            <div class="gallery-image" style="background-color: #363636">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="frame-border"></div>
+                        </div>
+                        <div class="gallery-caption">
+                            <span>Архитектура</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-nav">
+                <button class="nav-btn prev-btn" aria-label="Назад">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn" aria-label="Вперёд">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <button class="lightbox-close" aria-label="Закрыть">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-content">
+                <div class="lightbox-image"></div>
+                <div class="lightbox-zoom">
+                    <i class="fas fa-search-plus"></i>
+                </div>
+            </div>
+            <button class="lightbox-prev" aria-label="Предыдущее">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="lightbox-next" aria-label="Следующее">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">PROCESS</span>
+                <h2 class="section-title">Как мы работаем</h2>
+                <div class="title-decoration"></div>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-line">
+                    <div class="light-wave"></div>
+                </div>
+                
+                <div class="process-step" data-step="1">
+                    <div class="step-icon">
+                        <div class="lens-icon">
+                            <div class="lens-glass"></div>
+                            <div class="lens-ring"></div>
+                        </div>
+                        <div class="step-number">01</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Заявка в боте</h3>
+                        <p>Напишите в @KovalevPhotoBot — оперативно обсудим детали и подберём формат съёмки.</p>
+                    </div>
+                    <div class="step-substeps">
+                        <span>Выбор формата</span>
+                        <span>Определение даты</span>
+                    </div>
+                </div>
+
+                <div class="process-step" data-step="2">
+                    <div class="step-icon">
+                        <div class="lens-icon">
+                            <div class="lens-glass"></div>
+                            <div class="lens-ring"></div>
+                        </div>
+                        <div class="step-number">02</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Бриф-созвон</h3>
+                        <p>Детально обсуждаем вашу идею, визуальный стиль и важные детали предстоящей съёмки.</p>
+                    </div>
+                    <div class="step-substeps">
+                        <span>Обсуждение идеи</span>
+                        <span>Планирование</span>
+                    </div>
+                </div>
+
+                <div class="process-step" data-step="3">
+                    <div class="step-icon">
+                        <div class="lens-icon">
+                            <div class="lens-glass"></div>
+                            <div class="lens-ring"></div>
+                        </div>
+                        <div class="step-number">03</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Съёмка</h3>
+                        <p>Профессиональная фотосессия с вниманием к каждой детали и эмоции момента.</p>
+                    </div>
+                    <div class="step-substeps">
+                        <span>Работа с светом</span>
+                        <span>Естественные эмоции</span>
+                    </div>
+                </div>
+
+                <div class="process-step" data-step="4">
+                    <div class="step-icon">
+                        <div class="lens-icon">
+                            <div class="lens-glass"></div>
+                            <div class="lens-ring"></div>
+                        </div>
+                        <div class="step-number">04</div>
+                    </div>
+                    <div class="step-content">
+                        <h3>Обработка</h3>
+                        <p>Профессиональная цветокоррекция и ретушь. Каждый кадр — произведение искусства.</p>
+                    </div>
+                    <div class="step-substeps">
+                        <span>Цветокоррекция</span>
+                        <span>Ретушь</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">OTZYVY</span>
+                <h2 class="section-title">Отзывы</h2>
+                <div class="title-decoration"></div>
+            </div>
+
+            <div class="reviews-carousel">
+                <div class="reviews-track">
+                    <div class="review-card active">
+                        <div class="review-avatar">
+                            <div class="avatar-3d">
+                                <div class="avatar-face front">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="avatar-face back">A</div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-text typewriter" data-text="Дмитрий создал атмосферу, в которой я наконец увидела себя настоящую. Ни одна фотография раньше не передавала мою сущность так точно. Это не просто съёмка — это путешествие к себе.">
+                            </div>
+                            <div class="review-author">
+                                <span class="author-name">Анна К.</span>
+                                <span class="author-service">Бизнес-портрет</span>
+                            </div>
+                        </div>
+                        <div class="review-bg-photo"></div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-avatar">
+                            <div class="avatar-3d">
+                                <div class="avatar-face front">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="avatar-face back">D</div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-text typewriter" data-text="Корпоративный.event Became не просто отчётом о мероприятии, а настоящей историей. Коллеги до сих пор просят поделиться фотографиями.">
+                            </div>
+                            <div class="review-author">
+                                <span class="author-name">Дмитрий В.</span>
+                                <span class="author-service">Репортаж дня</span>
+                            </div>
+                        </div>
+                        <div class="review-bg-photo"></div>
+                    </div>
+                    <div class="review-card">
+                        <div class="review-avatar">
+                            <div class="avatar-3d">
+                                <div class="avatar-face front">
+                                    <i class="fas fa-user"></i>
+                                </div>
+                                <div class="avatar-face back">E</div>
+                            </div>
+                        </div>
+                        <div class="review-content">
+                            <div class="review-text typewriter" data-text="Свадьба — день, который пролетает мгновенно. Но благодаря Дмитрию, мы можем переживать его снова и снова. Каждый кадр — чистая эмоция.">
+                            </div>
+                            <div class="review-author">
+                                <span class="author-name">Елена и Максим</span>
+                                <span class="author-service">Свадьба</span>
+                            </div>
+                        </div>
+                        <div class="review-bg-photo"></div>
+                    </div>
+                </div>
+                
+                <div class="review-nav">
+                    <button class="review-btn prev" aria-label="Предыдущий отзыв">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="review-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="review-btn next" aria-label="Следующий отзыв">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-tag">CONTACT</span>
+                <h2 class="section-title">Свяжитесь с нами</h2>
+                <div class="title-decoration"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:d.kovalev@photostudio.by">d.kovalev@photostudio.by</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Telegram Бот</h4>
+                            <a href="https://t.me/KovalevPhotoBot" target="_blank">@KovalevPhotoBot</a>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Локация</h4>
+                            <span>Минск, Беларусь</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="VK">
+                            <i class="fab fa-vk"></i>
+                        </a>
+                    </div>
+
+                    <button class="offer-btn">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>Получить договор-оферту</span>
+                        <div class="offer-animation"></div>
+                    </button>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Ваше имя</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder=" ">
+                            <label for="phone">Телефон</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                            <label for="message">Сообщение</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Отправить</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-lens small">
+                        <div class="lens-ring ring-1"></div>
+                        <div class="lens-ring ring-2"></div>
+                        <div class="lens-ring ring-3"></div>
+                        <div class="lens-center"></div>
+                    </div>
+                    <span>Объектив Ковалёва</span>
+                </div>
+                <p class="footer-tagline">Вижу то, что другие пропускают</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ИП «Объектив Ковалёва». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Elements (hidden) -->
+    <audio id="shutterSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRl4FAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YToFAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=" type="audio/wav">
+    </audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ремонт со смыслом — Косметический, капитальный, умный дом</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <span class="header__logo-icon">🔧</span>
+      <span class="header__logo-text">Ремонт со смыслом</span>
+    </div>
+    <nav class="header__nav">
+      <a href="#services" class="header__link">Услуги</a>
+      <a href="#portfolio" class="header__link">Портфолио</a>
+      <a href="#about" class="header__link">О мастере</a>
+      <a href="#contacts" class="header__link">Контакты</a>
+      <a href="#blog" class="header__link">Блог</a>
+    </nav>
+    <a href="#cta" class="header__cta">Рассчитать стоимость</a>
+  </header>
+
+  <section class="hero">
+    <div class="hero__particles"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">
+        <span class="hero__title-line hero__title-line--1">Ремонт без нервов.</span>
+        <span class="hero__title-line hero__title-line--2">С заботой о вас и планете.</span>
+      </h1>
+      <p class="hero__subtitle">Косметический, капитальный, умный дом — под ключ.</p>
+      <a href="#cta" class="hero__cta">
+        <span class="hero__cta-icon">📐</span>
+        Рассчитать стоимость
+      </a>
+    </div>
+    <div class="hero__scroll-hint">
+      <div class="hero__scroll-arrow"></div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2 class="section-title">Наши услуги</h2>
+    <div class="services__grid">
+      <div class="service-card" data-service="cosmetic">
+        <div class="service-card__visual">
+          <div class="service-card__layer service-card__layer--old"></div>
+          <div class="service-card__layer service-card__layer--new"></div>
+          <div class="service-card__roller"></div>
+        </div>
+        <h3 class="service-card__title">Косметический ремонт под ключ</h3>
+        <p class="service-card__desc">Покраска, обои, замена плинтусов, потолки</p>
+        <a href="services.html" class="service-card__btn">
+          <span class="service-card__btn-icon">📏</span>
+          Подробнее
+        </a>
+      </div>
+
+      <div class="service-card" data-service="capital">
+        <div class="service-card__visual">
+          <div class="service-card__layers">
+            <div class="service-card__layer service-card__layer--1"></div>
+            <div class="service-card__layer service-card__layer--2"></div>
+            <div class="service-card__layer service-card__layer--3"></div>
+            <div class="service-card__layer service-card__layer--4"></div>
+          </div>
+        </div>
+        <h3 class="service-card__title">Капитальный ремонт</h3>
+        <p class="service-card__desc">Выравнивание стен/полов, замена инженерии, перепланировка</p>
+        <a href="services.html" class="service-card__btn">
+          <span class="service-card__btn-icon">🔨</span>
+          Подробнее
+        </a>
+      </div>
+
+      <div class="service-card" data-service="smart">
+        <div class="service-card__visual">
+          <div class="service-card__scheme">
+            <div class="service-card__point service-card__point--light"></div>
+            <div class="service-card__point service-card__point--floor"></div>
+            <div class="service-card__point service-card__point--leak"></div>
+            <div class="service-card__lines"></div>
+          </div>
+        </div>
+        <h3 class="service-card__title">Умный дом с нуля</h3>
+        <p class="service-card__desc">На базе контроллеров Rubetek и Aqara</p>
+        <a href="services.html" class="service-card__btn">
+          <span class="service-card__btn-icon">📱</span>
+          Подробнее
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <h2 class="section-title">Смета в трёх вариантах</h2>
+    <div class="pricing__grid">
+      <div class="pricing-card pricing-card--econom">
+        <div class="pricing-card__header">
+          <h3 class="pricing-card__title">Эконом</h3>
+          <p class="pricing-card__price">от 3 500 ₽/м²</p>
+        </div>
+        <ul class="pricing-card__list">
+          <li>Базовые материалы</li>
+          <li>Стандартные решения</li>
+          <li>Гарантия 12 месяцев</li>
+        </ul>
+        <a href="#cta" class="pricing-card__btn">Выбрать</a>
+      </div>
+
+      <div class="pricing-card pricing-card--comfort">
+        <div class="pricing-card__header">
+          <h3 class="pricing-card__title">Комфорт</h3>
+          <p class="pricing-card__price">от 6 000 ₽/м²</p>
+        </div>
+        <ul class="pricing-card__list">
+          <li>Улучшенные материалы</li>
+          <li>Дизайнерские решения</li>
+          <li>Гарантия 24 месяца</li>
+        </ul>
+        <a href="#cta" class="pricing-card__btn">Выбрать</a>
+      </div>
+
+      <div class="pricing-card pricing-card--premium">
+        <div class="pricing-card__header">
+          <h3 class="pricing-card__title">Премиум</h3>
+          <p class="pricing-card__price">от 10 000 ₽/м²</p>
+        </div>
+        <ul class="pricing-card__list">
+          <li>Экологичные материалы</li>
+          <li>Авторский надзор</li>
+          <li>Полная интеграция умного дома</li>
+        </ul>
+        <a href="#cta" class="pricing-card__btn">Выбрать</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <h2 class="section-title">Как мы работаем</h2>
+    <div class="process__timeline">
+      <div class="process__step" data-step="1">
+        <div class="process__step-icon">📱</div>
+        <div class="process__step-content">
+          <h3>Заявка в боте</h3>
+          <p>Отправьте планировку или фото помещения</p>
+        </div>
+      </div>
+      <div class="process__step" data-step="2">
+        <div class="process__step-icon">📐</div>
+        <div class="process__step-content">
+          <h3>Выезд на замер</h3>
+          <p>Точный замер лазерным нивелиром</p>
+        </div>
+      </div>
+      <div class="process__step" data-step="3">
+        <div class="process__step-icon">📋</div>
+        <div class="process__step-content">
+          <h3>Смета за 2 дня</h3>
+          <p>Детализированная смета с фиксированной ценой</p>
+        </div>
+      </div>
+      <div class="process__step" data-step="4">
+        <div class="process__step-icon">📸</div>
+        <div class="process__step-content">
+          <h3>Ежедневный фотоотчёт</h3>
+          <p>Каждый день — фото прогресса в боте</p>
+        </div>
+      </div>
+      <div class="process__step" data-step="5">
+        <div class="process__step-icon">🎬</div>
+        <div class="process__step-content">
+          <h3>Видеоинструкция по уходу</h3>
+          <p>Подробная инструкция по эксплуатации</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <h2 class="section-title">Наши работы</h2>
+    <div class="portfolio__filters">
+      <button class="portfolio__filter portfolio__filter--active" data-filter="all">Все</button>
+      <button class="portfolio__filter" data-filter="cosmetic">Косметический</button>
+      <button class="portfolio__filter" data-filter="capital">Капитальный</button>
+      <button class="portfolio__filter" data-filter="smart">Умный дом</button>
+    </div>
+    <div class="portfolio__grid">
+      <div class="portfolio__item portfolio__item--photo" data-type="capital">
+        <img src="images/portfolio/project1.jpg" alt="Косметический ремонт спальни" class="portfolio__photo">
+        <div class="portfolio__info">
+          <h3>Косметический ремонт спальни</h3>
+          <p>38 м² · 10 дней</p>
+        </div>
+      </div>
+      <div class="portfolio__item portfolio__item--photo" data-type="capital">
+        <img src="images/portfolio/project2.jpg" alt="Ремонт гостиной" class="portfolio__photo">
+        <div class="portfolio__info">
+          <h3>Ремонт гостиной</h3>
+          <p>45 м² · 21 день</p>
+        </div>
+      </div>
+      <div class="portfolio__item portfolio__item--photo" data-type="capital">
+        <img src="images/portfolio/project3.jpg" alt="Капитальный ремонт кухни" class="portfolio__photo">
+        <div class="portfolio__info">
+          <h3>Капитальный ремонт кухни</h3>
+          <p>12 м² · 30 дней</p>
+        </div>
+      </div>
+      <div class="portfolio__item portfolio__item--photo" data-type="capital">
+        <img src="images/portfolio/project4.jpg" alt="Ремонт лофт-студии" class="portfolio__photo">
+        <div class="portfolio__info">
+          <h3>Ремонт лофт-студии</h3>
+          <p>65 м² · 45 дней</p>
+        </div>
+      </div>
+      <div class="portfolio__item portfolio__item--photo" data-type="capital">
+        <img src="images/portfolio/project5.jpg" alt="Ремонт гостиной-кабинета" class="portfolio__photo">
+        <div class="portfolio__info">
+          <h3>Ремонт гостиной-кабинета</h3>
+          <p>52 м² · 35 дней</p>
+        </div>
+      </div>
+      <div class="portfolio__item portfolio__item--photo" data-type="capital">
+        <img src="images/portfolio/project6.jpg" alt="Ремонт прихожей" class="portfolio__photo">
+        <div class="portfolio__info">
+          <h3>Ремонт прихожей</h3>
+          <p>18 м² · 14 дней</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="guarantees" id="guarantees">
+    <h2 class="section-title">Гарантии и прозрачность</h2>
+    <div class="guarantees__grid">
+      <div class="guarantee-card">
+        <div class="guarantee-card__icon">🏆</div>
+        <h3>Гарантия 24 месяца</h3>
+        <p>Мы отвечаем за каждый миллиметр</p>
+        <div class="guarantee-card__stamp"></div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-card__icon">💰</div>
+        <h3>Открытые цены</h3>
+        <p>Фиксированная смета без скрытых платежей</p>
+        <div class="guarantee-card__check"></div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-card__icon">📸</div>
+        <h3>Фотоотчёт каждый день</h3>
+        <p>Вы видите прогресс в реальном времени</p>
+        <div class="guarantee-card__carousel"></div>
+      </div>
+      <div class="guarantee-card">
+        <div class="guarantee-card__icon">🧾</div>
+        <h3>Закупка по чекам</h3>
+        <p>Все материалы — с подтверждением покупки</p>
+        <div class="guarantee-card__receipt"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="reviews" id="reviews">
+    <h2 class="section-title">Отзывы</h2>
+    <div class="reviews__grid">
+      <div class="review-card">
+        <div class="review-card__header">
+          <img src="images/reviews/client1.svg" alt="Клиент" class="review-card__avatar">
+          <div class="review-card__info">
+            <h4>Анна М.</h4>
+            <div class="review-card__stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="review-card__text">«Ремонт завершили в срок, всё чисто и аккуратно. Очень довольна результатом!»</p>
+      </div>
+      <div class="review-card">
+        <div class="review-card__header">
+          <img src="images/reviews/client2.svg" alt="Клиент" class="review-card__avatar">
+          <div class="review-card__info">
+            <h4>Дмитрий К.</h4>
+            <div class="review-card__stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="review-card__text">«Умный дом работает идеально! Алексей всё подробно объяснил и помог с настройкой.»</p>
+      </div>
+      <div class="review-card">
+        <div class="review-card__header">
+          <img src="images/reviews/client3.svg" alt="Клиент" class="review-card__avatar">
+          <div class="review-card__info">
+            <h4>Елена В.</h4>
+            <div class="review-card__stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+        </div>
+        <p class="review-card__text">«Капитальный ремонт квартиры — это стресс, но с этой командой всё прошло гладко. Рекомендую!»</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bot" id="bot">
+    <div class="bot__content">
+      <h2>Бот-помощник</h2>
+      <p>Загрузите планировку или фото помещения, получите расчёт за 5 минут</p>
+      <div class="bot__demo">
+        <div class="bot__phone">
+          <div class="bot__screen">
+            <div class="bot__message bot__message--bot">Загрузите планировку или фото помещения</div>
+            <div class="bot__message bot__message--user">[Планировка]</div>
+            <div class="bot__message bot__message--bot">Расчёт: от 180 000 ₽</div>
+          </div>
+        </div>
+      </div>
+      <a href="https://t.me/RemontSmyslBot" class="bot__btn" target="_blank">
+        Перейти в бот
+        <span class="bot__btn-icon">✈️</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="cta" id="cta">
+    <div class="cta__content">
+      <h2>Готовы начать ремонт?</h2>
+      <p>Оставьте заявку и получите точный расчёт за 2 дня</p>
+      <form class="cta__form">
+        <input type="text" placeholder="Ваше имя" required>
+        <input type="tel" placeholder="Телефон" required>
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Опишите ваш проект"></textarea>
+        <button type="submit" class="cta__submit">
+          <span class="cta__submit-icon">🔨</span>
+          Отправить заявку
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__content">
+      <div class="footer__info">
+        <h3>ИП «Ремонт со смыслом»</h3>
+        <p>Алексей Громов</p>
+        <p>alexey.remont@inbox.ru</p>
+        <p>@RemontSmyslBot</p>
+      </div>
+      <div class="footer__links">
+        <a href="#services">Услуги</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#about">О мастере</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+      <div class="footer__social">
+        <a href="#" class="footer__social-link">VK</a>
+        <a href="#" class="footer__social-link">Telegram</a>
+        <a href="#" class="footer__social-link">YouTube</a>
+      </div>
+      <div class="footer__map">
+        <div class="footer__map-point"></div>
+        <p>Москва</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

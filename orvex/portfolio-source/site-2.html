@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataPulse Analytics — AI-Powered E-commerce BI Platform</title>
+  <meta name="description" content="Ask your data in plain English. AI-powered business intelligence for e-commerce retailers.">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Three.js + Post-Processing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/EffectComposer.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/RenderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/ShaderPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/postprocessing/UnrealBloomPass.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/CopyShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/shaders/LuminosityHighPassShader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo">DataPulse</div>
+    <div class="preloader-bar"></div>
+    <div class="preloader-percent">Loading experience...</div>
+  </div>
+
+  <!-- Particle background -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">DP</div>
+      <span>DataPulse</span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Start Free Trial</a>
+    </div>
+    <div class="nav-hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="hero-image-wrap">
+      <img src="img/hero.png" alt="DataPulse Analytics" class="hero-image">
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge" id="hero-badge">
+        <span class="hero-badge-dot"></span>
+        AI-Powered Analytics Platform
+      </div>
+      <h1 class="hero-title" id="hero-title">
+        Ask your data.<br>
+        <span class="gradient">In plain English.</span>
+      </h1>
+      <p class="hero-subtitle" id="hero-subtitle">
+        AI-powered business intelligence for e-commerce.<br>
+        Connect your store, ask questions, get answers — instantly.
+      </p>
+      <div class="hero-actions" id="hero-actions">
+        <a href="contact.html" class="btn-primary">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
+          Start Free Trial
+        </a>
+        <a href="#showcase" class="btn-secondary">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          See Live Demo
+        </a>
+      </div>
+
+      <!-- Live Demo Widget -->
+      <div class="hero-demo" id="hero-demo">
+        <div class="hero-demo-window">
+          <div class="hero-demo-header">
+            <div class="demo-dot red"></div>
+            <div class="demo-dot yellow"></div>
+            <div class="demo-dot green"></div>
+            <span class="hero-demo-title">Pulse Check — Real-time Analytics</span>
+          </div>
+          <div class="hero-demo-body">
+            <div class="demo-metric">
+              <div class="demo-metric-label">Revenue Today</div>
+              <div class="demo-metric-value cyan" id="metric-revenue">$48,293</div>
+              <div class="demo-metric-change">+12.4% vs yesterday</div>
+            </div>
+            <div class="demo-metric">
+              <div class="demo-metric-label">Active Sessions</div>
+              <div class="demo-metric-value green" id="metric-sessions">1,847</div>
+              <div class="demo-metric-change">+8.2% vs avg</div>
+            </div>
+            <div class="demo-metric">
+              <div class="demo-metric-label">Conversion Rate</div>
+              <div class="demo-metric-value purple" id="metric-conversion">3.24%</div>
+              <div class="demo-metric-change">+0.4% improvement</div>
+            </div>
+            <div class="demo-chart" id="demo-chart"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="section" id="features">
+    <div class="orb orb-2" style="top: 20%; left: -5%;"></div>
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="section-label-line"></span>
+        Core Features
+        <span class="section-label-line"></span>
+      </div>
+      <h2 class="section-title">Three pillars of<br><span class="text-cyan">intelligent analytics</span></h2>
+      <p class="section-desc">Built for e-commerce teams who need answers, not dashboards. DataPulse turns complexity into clarity.</p>
+    </div>
+
+    <div class="features-grid">
+      <!-- Feature 1: NLQ -->
+      <div class="feature-card reveal reveal-delay-1" data-tilt>
+        <div class="feature-icon">💬</div>
+        <h3 class="feature-title">Natural Language Queries</h3>
+        <p class="feature-desc">Ask questions like "What were my top products in Germany last week?" — get instant, visual answers with AI-powered insights.</p>
+        <div class="feature-3d-canvas" id="feature-nlq"></div>
+      </div>
+
+      <!-- Feature 2: Anomaly Detection -->
+      <div class="feature-card reveal reveal-delay-2" data-tilt>
+        <div class="feature-icon">🔍</div>
+        <h3 class="feature-title">Anomaly Detection</h3>
+        <p class="feature-desc">Our AI watches your metrics 24/7. When something unusual happens — a traffic spike, a revenue dip — you'll know before it matters.</p>
+        <div class="feature-3d-canvas" id="feature-anomaly"></div>
+      </div>
+
+      <!-- Feature 3: Predictive Inventory -->
+      <div class="feature-card reveal reveal-delay-3" data-tilt>
+        <div class="feature-icon">📦</div>
+        <h3 class="feature-title">Predictive Inventory</h3>
+        <p class="feature-desc">Forecast demand with machine learning. Never overstock or run out — optimize inventory across all channels automatically.</p>
+        <div class="feature-3d-canvas" id="feature-inventory"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="section" id="how-it-works">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="section-label-line"></span>
+        How It Works
+        <span class="section-label-line"></span>
+      </div>
+      <h2 class="section-title">From data to decisions<br><span class="text-cyan">in three steps</span></h2>
+      <p class="section-desc">No setup fees. No months of implementation. Connect your store and start getting insights in under 5 minutes.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal reveal-delay-1">
+        <div class="step-number">1</div>
+        <div class="step-visual" id="step1-visual"></div>
+        <h3 class="step-title">Connect your store</h3>
+        <p class="step-desc">One-click integrations with Shopify, WooCommerce, Google Analytics, and 40+ data sources.</p>
+      </div>
+      <div class="step reveal reveal-delay-2">
+        <div class="step-number">2</div>
+        <div class="step-visual" id="step2-visual"></div>
+        <h3 class="step-title">DataPulse AI analyzes</h3>
+        <p class="step-desc">Our neural network processes your data in real-time, finding patterns humans miss.</p>
+      </div>
+      <div class="step reveal reveal-delay-3">
+        <div class="step-number">3</div>
+        <div class="step-visual" id="step3-visual"></div>
+        <h3 class="step-title">Get actionable insights</h3>
+        <p class="step-desc">Beautiful dashboards, smart alerts, and predictive reports — all in plain English.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DASHBOARD SHOWCASE ===================== -->
+  <section class="section" id="showcase">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="section-label-line"></span>
+        Interactive Demo
+        <span class="section-label-line"></span>
+      </div>
+      <h2 class="section-title">See DataPulse<br><span class="text-cyan">in action</span></h2>
+      <p class="section-desc">Explore a live preview of our dashboard. Hover over elements to see real-time animations.</p>
+    </div>
+
+    <div class="showcase reveal">
+      <div class="showcase-grid">
+        <div class="showcase-main">
+          <canvas id="showcase-canvas"></canvas>
+        </div>
+        <div class="showcase-side">
+          <div class="showcase-side-title">Key Metrics</div>
+          <div class="showcase-metrics">
+            <div class="showcase-metric-item">
+              <span class="showcase-metric-name">Total Revenue</span>
+              <span class="showcase-metric-val text-cyan" id="sm-revenue">$1.2M</span>
+            </div>
+            <div class="showcase-metric-item">
+              <span class="showcase-metric-name">Orders</span>
+              <span class="showcase-metric-val" id="sm-orders">8,432</span>
+            </div>
+            <div class="showcase-metric-item">
+              <span class="showcase-metric-name">Avg. Order Value</span>
+              <span class="showcase-metric-val text-cyan" id="sm-aov">$142</span>
+            </div>
+            <div class="showcase-metric-item">
+              <span class="showcase-metric-name">Return Rate</span>
+              <span class="showcase-metric-val" style="color: var(--green);" id="sm-return">2.1%</span>
+            </div>
+          </div>
+          <button class="showcase-try-btn" onclick="openDemoOverlay()">Try Interactive Demo</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COUNTER ===================== -->
+  <section class="counter-section" id="counter">
+    <div class="counter-value" id="counter-val">0</div>
+    <div class="counter-label">retailers trust DataPulse to power their analytics</div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="section" id="testimonials">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <span class="section-label-line"></span>
+        Testimonials
+        <span class="section-label-line"></span>
+      </div>
+      <h2 class="section-title">Loved by <span class="text-cyan">400+ retailers</span></h2>
+    </div>
+
+    <div class="testimonials-track">
+      <div class="testimonials-slide" id="testimonials-slide">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"DataPulse replaced three separate tools for us. The natural language queries are a game-changer — our team spends less time building reports and more time acting on insights."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JK</div>
+            <div>
+              <div class="testimonial-name">James Kim</div>
+              <div class="testimonial-role">Head of Analytics, ShopNova</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"The anomaly detection caught a pricing error that would have cost us $50K. It paid for itself in the first week. I can't imagine running e-commerce without it."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">SL</div>
+            <div>
+              <div class="testimonial-name">Sarah Laurent</div>
+              <div class="testimonial-role">CEO, ModaDirect</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"We reduced inventory waste by 34% with predictive analytics. The AI forecasts are scarily accurate. Our operations team finally sleeps at night."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MP</div>
+            <div>
+              <div class="testimonial-name">Marcus Petersen</div>
+              <div class="testimonial-role">COO, NordicGoods</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Setup took 5 minutes. I connected Shopify and immediately started asking questions. The AI understood context perfectly — no SQL, no formulas, just English."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">EW</div>
+            <div>
+              <div class="testimonial-name">Elena Wilson</div>
+              <div class="testimonial-role">Founder, BrightPath Store</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Our board wanted weekly reports. DataPulse generates them automatically with narrative insights. It's like having a data scientist on staff 24/7."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">RT</div>
+            <div>
+              <div class="testimonial-name">Raj Thakur</div>
+              <div class="testimonial-role">VP Growth, FreshCart</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Cross-channel attribution used to take us days. Now it's instant. DataPulse unified our Shopify, Amazon, and GA data into one clear picture."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AH</div>
+            <div>
+              <div class="testimonial-name">Anna Hoffmann</div>
+              <div class="testimonial-role">Marketing Director, EcoRetail</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA ===================== -->
+  <section class="section" style="text-align: center;">
+    <div class="reveal" style="max-width: 700px; margin: 0 auto;">
+      <h2 class="section-title" style="margin-bottom: 24px;">Ready to unlock<br><span class="text-cyan">your data?</span></h2>
+      <p class="section-desc" style="margin-bottom: 40px;">Start your free 14-day trial. No credit card required. Setup in 5 minutes.</p>
+      <a href="contact.html" class="btn-primary" style="font-size: 1.1rem; padding: 18px 44px;">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
+        Start Free Trial
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="nav-logo" style="margin-bottom: 0;">
+          <div class="nav-logo-icon">DP</div>
+          <span>DataPulse</span>
+        </div>
+        <p class="footer-brand-desc">AI-powered business intelligence for e-commerce. Ask your data questions in plain English and get instant, actionable insights.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Product</div>
+        <div class="footer-links">
+          <a href="features.html">Features</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="#">API Docs</a>
+          <a href="#">Integrations</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <div class="footer-links">
+          <a href="about.html">About Us</a>
+          <a href="#">Blog</a>
+          <a href="contact.html">Contact</a>
+          <a href="#">Careers</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Support</div>
+        <div class="footer-links">
+          <a href="#">Documentation</a>
+          <a href="#">Help Center</a>
+          <a href="#">Status</a>
+          <a href="mailto:support@datapulse-analytics.com">support@datapulse-analytics.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">&copy; 2024 DataPulse Analytics. All rights reserved.</div>
+      <div class="footer-badges">
+        <div class="footer-badge"><span class="check">✓</span> SOC 2 Type II Certified</div>
+        <div class="footer-badge"><span class="check">✓</span> GDPR Compliant</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Demo Overlay -->
+  <div class="demo-overlay" id="demo-overlay">
+    <div class="demo-overlay-close" onclick="closeDemoOverlay()">✕</div>
+    <div class="demo-overlay-content">
+      <canvas id="demo-overlay-canvas" style="width:100%; height:100%;"></canvas>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
