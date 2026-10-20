@@ -1,1 +1,9 @@
 .kadr-prep{display:grid;grid-template-columns:1.05fr .95fr;min-height:690px;background:#dbd4c9;color:#272726}.kadr-prep-image{position:relative;min-height:690px;overflow:hidden}.kadr-prep-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}.kadr-prep-image span{position:absolute;left:25px;bottom:25px;padding:10px 15px;background:#e8e3da;font-size:11px;letter-spacing:.15em}.kadr-prep-copy{align-self:center;padding:clamp(40px,6vw,100px)}.kadr-prep h2{font:400 clamp(48px,5vw,80px)/1.02 'Playfair Display',serif;letter-spacing:-.06em;margin:23px 0}.kadr-prep-copy>p{line-height:1.75;max-width:480px}.kadr-prep ol{list-style:none;margin:35px 0;padding:0;border-top:1px solid #a39f98}.kadr-prep li{display:grid;grid-template-columns:120px 1fr;gap:16px;padding:17px 0;border-bottom:1px solid #a39f98;line-height:1.55}.kadr-prep li b{font-size:12px;letter-spacing:.07em}.kadr-prep a{display:inline-block;border-bottom:1px solid currentColor;padding-bottom:6px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}@media(max-width:760px){.kadr-prep{display:block}.kadr-prep-image{min-height:430px}.kadr-prep-copy{padding:55px 22px}.kadr-prep li{grid-template-columns:100px 1fr}}
+/* Keep faces in frame on narrow phones; each portrait has its own focal point. */
+@media (max-width:600px){
+  .gallery{grid-template-columns:minmax(0,1fr);gap:18px}
+  .gallery .frame,.gallery .frame:first-child{grid-column:auto;height:clamp(370px,112vw,490px)}
+  .gallery .frame:first-child img{object-position:12% 42%}
+  .gallery .frame:nth-child(2) img{object-position:70% 34%}
+  .gallery .frame:nth-child(3) img{object-position:50% 32%}
+}
